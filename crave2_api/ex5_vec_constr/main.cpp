@@ -31,21 +31,21 @@ class item : public rand_obj {
 
   friend ostream& operator<<(ostream& os, item& it) {
     os << "src_addr_vec = ";
-    for (uint i = 0; i < it.src_addr_vec.size(); i++) os << it.src_addr_vec[i] << " ";
+    for (unsigned int i = 0; i < it.src_addr_vec.size(); i++) os << it.src_addr_vec[i] << " ";
     os << std::endl;
     os << "dest_addr_vec = ";
-    for (uint i = 0; i < it.dest_addr_vec.size(); i++) os << it.dest_addr_vec[i] << " ";
+    for (unsigned int i = 0; i < it.dest_addr_vec.size(); i++) os << it.dest_addr_vec[i] << " ";
     os << std::endl;
     os << "data_vec = ";
-    for (uint i = 0; i < it.data_vec.size(); i++) os << it.data_vec[i] << " ";
+    for (unsigned int i = 0; i < it.data_vec.size(); i++) os << it.data_vec[i] << " ";
     os << std::endl;
     return os;
   }
 
-  rand_vec<uint> src_addr_vec;
-  rand_vec<uint> dest_addr_vec;
-  rand_vec<uint> data_vec;
-  randv<uint> tmp;
+  rand_vec<unsigned int> src_addr_vec;
+  rand_vec<unsigned int> dest_addr_vec;
+  rand_vec<unsigned int> data_vec;
+  randv<unsigned int> tmp;
 };
 
 int main(int argc, char* argv[]) {

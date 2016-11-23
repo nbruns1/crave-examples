@@ -26,7 +26,7 @@ class item : public crv_sequence_item {
     return os;
   }
 
-  uint src_addr;
+  unsigned int src_addr;
   crv_variable<unsigned> dest_addr;
 
   crv_constraint c_dest_aligned;
@@ -36,7 +36,7 @@ class item : public crv_sequence_item {
 int main(int argc, char* argv[]) {
   crave::init("crave.cfg");
   item it("single_packet");
-  for (uint i = 0; i < 20; i++) {
+  for (unsigned int i = 0; i < 20; i++) {
     it.src_addr = i;
     CHECK(it.randomize());
     std::cout << it << std::endl;

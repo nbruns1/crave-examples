@@ -20,14 +20,14 @@ class item : public rand_obj {
     return os;
   }
 
-  uint src_addr;
-  randv<uint> dest_addr;
+  unsigned int src_addr;
+  randv<unsigned int> dest_addr;
 };
 
 int main(int argc, char* argv[]) {
   crave::init("crave.cfg");
   item it;
-  for (uint i = 0; i < 20; i++) {
+  for (unsigned int i = 0; i < 20; i++) {
     it.src_addr = i;
     CHECK(it.next());
     std::cout << it << std::endl;
